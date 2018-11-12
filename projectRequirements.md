@@ -1,1 +1,0 @@
-# QuIP project requirements

@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class MainTest
+public class QuIPvTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class MainTest
      *
      * @param testName name of the test case
      */
-    public MainTest( String testName )
+    public QuIPvTest( String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class MainTest
      */
     public static Test suite()
     {
-        return new TestSuite( MainTest.class );
+        return new TestSuite( QuIPvTest.class );
     }
 
 
@@ -34,7 +34,7 @@ public class MainTest
      */
     public void testApp()
     {
-        Main a = new Main();
+        QuIPv a = new QuIPv();
         assert(a.nextPrime(9) == 11);
         assert(a.nextPrime(1) == 2);
     }

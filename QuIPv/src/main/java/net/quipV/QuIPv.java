@@ -2,10 +2,10 @@ package net.quipV;
 import org.apache.commons.math3.primes.Primes;
 
 /**
- * Hello world!
- *
+ *Main Back-End Controller for the QuIPv Application
+ *Interacts with UI then performs appropiate actions using package modules
  */
-public class Main
+public class QuIPv
 {
 
     int nextPrime(int x) {

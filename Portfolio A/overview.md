@@ -7,7 +7,7 @@ BSDR (Bath Social Development Research Ltd) is a non-profit research organisatio
 
 QuIP 
 ----
-The QuIP provides a straightforward and cost-effective mechanism to ask intended beneficiaries about significant drivers of change in their lives, and to analyse and present the data collected. The approach is designed to help organisations to assess, learn from and demonstrate the social impact of their work. It places intended beneficiaries’ voices at the centre of reporting, and demonstrates a genuine commitment to learning about what works and what doesn’t work. The QuIP reveals what your most important stakeholders i.e. the interviewees really think is significant. 
+The QuIP provides a straightforward and cost-effective mechanism to ask intended beneficiaries about significant drivers of change in their lives, and to analyse and present the data collected. The approach is designed to help organisations to assess, learn from and demonstrate the social impact of their work. It places intended beneficiaries’ voices at the centre of reporting, and demonstrates a genuine commitment to learning about what works and what doesn’t work. The QuIP reveals what your most important stakeholders i.e. the interviewees, really think is significant. 
 
 Problem 
 -------
@@ -22,3 +22,6 @@ Our solution is a bespoke applicaton that will:
 4. Create several causal chain diagram from the import data; 
 5. Allow the user to edit the diagram;
 6. Export the result as static image file and/or an interactive webpage. 
+
+References
+BathSDR

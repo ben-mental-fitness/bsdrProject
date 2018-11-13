@@ -18,6 +18,11 @@ This project aims to create a laptop application (Windows & iOS) which creates c
 Structure & Languages
 ---
 
+>UML Class Diagram (with language)
+
+>UML Test Diagram (with language)
+
 Example Run Through
 ---
 
+>UML Flow Diagram

@@ -2,7 +2,8 @@
 
 >Software Product Engineering Project for creating qualitative causal chain data visualisations for Bath Social & Development Research Ltd
 
-####Overview
+Overview
+---
 This project aims to create a laptop application (Windows & iOS) which creates causal chain analysis diagrams for social impact assessment.
  
  Below is an overview of the timeline for this project:
@@ -14,7 +15,9 @@ This project aims to create a laptop application (Windows & iOS) which creates c
  |Beta Release|13/02/2019|
  |Final Release & Portfolio Submission|17/04/2019|
  
-####Structure & Languages
+Structure & Languages
+---
 
-####Example Run Through
+Example Run Through
+---
 

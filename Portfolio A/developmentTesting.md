@@ -1,0 +1,6 @@
+-JAVA Maven
+-JavaFx Maven
+-UI Manual Testing, test boundary cases etc.
+-Develop tests first then build up solution
+-Ensures complete code coverage
+-Develop tests in design of each new sprint

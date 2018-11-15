@@ -1,16 +1,24 @@
-With reference to the architecture diagram in the previous section, describe your test strategy for each component. For example, unit test and integration tests on back and front end.
+## Development Testing
 
-List testing frameworks you will use to develop those tests.
+#### Unit Testing
+- Testing elements individually
 
-Describe challenges that affect the testability of the components and what you will do to overcome these.
+#### Integration Testing
+- Testing element interactions
 
-This section must not exceed a single sheet of A4.
+#### Systems & Acceptance Testing
+- Testing whole system against requirements & busineess needs
 
--------
+#### Frameworks
+- List of frameworks to be used
 
--JAVA Maven
--JavaFx Maven
--UI Manual Testing, test boundary cases etc.
--Develop tests first then build up solution
--Ensures complete code coverage
--Develop tests in design of each new sprint
+|Framework | Use |
+|:---:|:---:|
+|JUnit||
+|JFx Test||
+
+#### Challenges 
+- Difficulties in testing components
+
+|Challenge | Action |
+|:---:|:---:|

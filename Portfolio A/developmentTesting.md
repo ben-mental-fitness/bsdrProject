@@ -19,7 +19,6 @@ Below is an outline of testing for each module in the application back end:
     - JFx Test Driver
 
 #### Challenges 
-- Difficulties in testing components
 
 |Challenge | Action |
 |:---:|:---:|

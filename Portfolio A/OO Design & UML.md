@@ -11,10 +11,7 @@
 
 
 ![ERROR: Back End Class Diagram not found](classDiagram.jpg)
-
-- Main goal
-- Challenges in logic & reason for choice
-- Knowledge gained from modelling
+> Back End Structure
 
 > The main goal of the project is to decrease the time and effort needed to create visualisations for
 causal chain analysis
@@ -33,10 +30,21 @@ new export types can easily be added in the future as well as new types of visua
 development of these two functionalities may allow Bath SDR to not require the use of MicroStrategy
 making analysis quicker and less complex (meeting our main goal).
 
-#### Back End Sequence Diagram
 
 ![ERROR: Back End Sequence Diagram not found](sequenceDiagram.jpg)
+> Standard flow Use Case
 
-- Use case
-- Challenges in logic & reason for choice
-- Knowledge gained from model
+This diagram is based on a standard use case for our application. We start by choosing a study to
+load in, before fetching it from AWS & storing it in 'DataNodes'. The required fields are selected
+by the user, before they create the visualisation. After the visualisation is made it can be edited,
+before being exported (statically in this case).
+
+This model better illustrates the interactions between components in our system by clearly showing when
+& where they interact. Combined with other sequence diagrams, this can form a basis for our test cases
+by looking at what will happen with unexpected flow e.g. creating a visualisation without any data or fields
+selected.
+
+Combined with the class diagrams we can change which types of data are stored where, leading to less passing 
+of variables and neater code. We thought that using a central module to control interactions with the UI we 
+can better control the flow of program, making it easier to find errors (than the UI calling any module it
+needs directly).

@@ -1,0 +1,43 @@
+CREATE TABLE `SDR_LIVE_DataEntry` (
+  `QuestionNumber` varchar(100) DEFAULT NULL,
+  `Question` varchar(1000) DEFAULT NULL,
+  `answer` varchar(1000) DEFAULT NULL,
+  `RespondentID` varchar(10) DEFAULT NULL,
+  `SheetName` varchar(20) DEFAULT NULL,
+  `SourceFileInstanceID` int(10) DEFAULT NULL,
+  `FileinstanceID` int(10) DEFAULT NULL,
+  `ProjectName` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `SDR_LIVE_MainTable` (
+  `SourceFileinstanceID` int(10) DEFAULT NULL,
+  `row_id` int(10) DEFAULT NULL,
+  `InterviewType` varchar(20) DEFAULT NULL,
+  `Respondent_ID` varchar(10) DEFAULT NULL,
+  `Question_ID` varchar(5) DEFAULT NULL,
+  `Question` varchar(446) DEFAULT NULL,
+  `Full_Answer` varchar(1000) DEFAULT NULL,
+  `Broken_Answer` varchar(1000) DEFAULT NULL,
+  `Driver_of_Change` varchar(3) DEFAULT NULL,
+  `Outcome_1` varchar(10) DEFAULT NULL,
+  `Outcome_2` varchar(10) DEFAULT NULL,
+  `Outcome_3` varchar(10) DEFAULT NULL,
+  `Attribution__1_9` varchar(1) DEFAULT NULL,
+  `Domain_Attributed` varchar(100) DEFAULT NULL,
+  `RespDomain` varchar(100) DEFAULT NULL,
+  `RespDriver` varchar(100) DEFAULT NULL,
+  `RespDriverDomain` varchar(100) DEFAULT NULL,
+  `ProjectName` varchar(200) DEFAULT NULL,
+  `FileinstanceID` int(10) DEFAULT NULL,
+  `ParentFileinstanceID` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `SDR_LIVE_Tagging` (
+  `code` varchar(10) NOT NULL,
+  `description` varchar(136) DEFAULT NULL,
+  `cluster` varchar(2) DEFAULT NULL,
+  `clusterDescription` varchar(100) DEFAULT NULL,
+  `ProjectName` varchar(200) NOT NULL,
+  `FileinstanceID` int(10) DEFAULT NULL,
+  `ParentFileinstanceID` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

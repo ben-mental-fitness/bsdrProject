@@ -1,2 +1,2 @@
-*.idea
-*.testIntelliJ
+*/target/
+*.idea/

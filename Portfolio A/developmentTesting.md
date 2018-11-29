@@ -1,7 +1,7 @@
 Development Testing
 ===
 
-#### Overview
+### Overview
 
 Our testing strategy is to use test driven development. We will begin by creating [Unit Tests](http://softwaretestingfundamentals.com/unit-testing/)
  for each module of our project. This will dictate the code written in each module, ensuring we have complete code coverage
@@ -18,7 +18,7 @@ We will use bottom up [Integration Testing](http://softwaretestingfundamentals.c
  and what doesn't using our knowledge of the system. BSDR testing gives us insight into how the application will be used in the
  real world, exposing bugs or flaws not apparent to our development team.
 
-#### Back End Testing
+### Back End Testing
 
 Below is an outline of testing for each module in the application back end:
 
@@ -32,7 +32,7 @@ Below is an outline of testing for each module in the application back end:
 |StaticExporter|We will create a checksum using the image file which will return to JUnit tests. By using an online checksum calculator to create tests this process becomes a neat way to check files. This could easily be further developed to a Digital Signature for trusted file sharing|
 
 
-#### Challenges 
+### Challenges 
 
 |Challenge | Action |
 |:---:|:---:|
@@ -43,9 +43,12 @@ Below is an outline of testing for each module in the application back end:
 |Test need to be up to date & inline with the clients needs|We will review & update tests after every sprint we complete. This includes reviewing our testing methodology, with the aim that this scrutiny will expose any problems with our methods before they grow further down the line of development.|
 
  
-#### Frameworks
+### Frameworks
 
 -  Maven
     - _JS Test Driver_
     - _JUnit_
     - _JFx Test Driver_
+    
+#### References
+[Software Testing Fundamentals](http://softwaretestingfundamentals.com) 11/11/18

@@ -1,4 +1,5 @@
-﻿## System Stakeholders
+﻿System Stakeholders
+===
 
 ### About the Stakeholders
 - Clients - Commission the collection of qualitative data bespoke to their own requirements, other clients may just use pre-existing collected data. Examples of clients are;
@@ -18,7 +19,7 @@
 
 -----
 
-## Main Goal
+### Main Goal
 
 The main goal of the project is to decrease the time and effort needed to create visualisations for causal chain analysis. In order to achieve this, we need to provide a cross platform application (Windows and macOS) described as follows:
 ### Functional requirements

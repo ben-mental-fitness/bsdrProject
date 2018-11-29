@@ -1,8 +1,8 @@
 Overview
 ========
 
-Bath SDR 
-----
+### Bath SDR 
+
 BSDR _(Bath Social Development Research Ltd)_ is a non-profit research organisation founded by a small team of researchers
  from the CDS [_(Centre for Development Studies)_](http://www.bath.ac.uk/cds/) at the University of Bath with the ambition
  to bring more research into practice.
@@ -16,8 +16,8 @@ The QuIP provides a straightforward and cost-effective mechanism to ask intended
  voices at the centre of reporting, whilst demonstrating a genuine commitment to learning about what works and what doesn't.
   
   
-Problem 
--------
+### Problem 
+
 The procedure needed to produce a visual report of the data is protracted and the quality could be improved. BSDR use
  [Microstrategy](https://www.microstrategy.com/us) to analyse data and create causal chain diagrams. However, there is
  no simple solution to export the end result so currently a screenshot image of Microstrategy is used.
@@ -26,8 +26,8 @@ The procedure needed to produce a visual report of the data is protracted and th
  functionality in terms of diagram creation, manipulation and exportation. It should be exported as either a static image
  file to use in reports or an interactive webpage that can be shared with clients.
 
-Solution 
---------
+### Solution 
+
 Our solution is a bespoke applicaton that will:
 1. Run on both Windows and Mac;
 1. Be able to import data from an SQL database;
@@ -36,5 +36,5 @@ Our solution is a bespoke applicaton that will:
 1. Allow the user to edit the diagram;
 1. Allow diagrams to be exported as a static image file or an interactive webpage. 
 
-**References:**
-[_Bath Social and Development Research Ltd._](http://bathsdr.org/)
+#### References
+[_Bath Social and Development Research Ltd._](http://bathsdr.org/) 9/11/18

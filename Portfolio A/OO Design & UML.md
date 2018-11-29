@@ -1,5 +1,6 @@
 
-# OO Design & UML
+ OO Design & UML
+===
 
 ![ERROR: Client Server Diagram not found](clientServer.jpg)
 

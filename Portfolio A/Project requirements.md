@@ -22,22 +22,18 @@ core set of the use-case goals, list steps involved in achieving each goal. Desc
 - Reporting - Have a range of useful visualisations to utilise in report for client
     1. Ensure sufficient qualitative data is collected, it is coded correctly and ready to be imported into visualisation software.
     2. Visualisation software correctly uses the coded data to represents the collected data. It must also have a few variations of ways to display chosen data. 
-    3. Visualisation software exports the visualisation ready for use in the report.
-    4. Alternative flow, chosen alternative path to goal.
-    5. Exceptional flow, unintended path through system.
+    3. Visualisation software exports the visualisation ready for use in the report, there may be multiple export types, static and dynamic.
+    4. An unintended path through system, would be having limited variations of ways to display the data, and only being able to export the visualisation as a static image.
 - Evaluation Community - To be able to assess process of investigation and the final findings to ensure QuiP is working
     1. Firstly the evaluation community would need to assess the collection of data, and how process of preparing it for use in the visualisation software. The QuiP is a part of this 
     stage and would be under the most scrutiny, to ensure it is working as it should be, to improve the use a qualitative data.
     2. The evaluation community may be interested in how the visualisation software takes the coded data, and uses it to represent the drivers of change, that is representative of the data originally collected.
     3. Reporting stage must be successfully completed, to assess the final findings, report, of the investigation.
-    4. Alternative flow, chosen alternative path to goal.
-    5. Exceptional flow, unintended path through system.  
 - Client - To be able to assess impact of charitable work done, request BSDR to carry out report.
     1. Firstly they'll need to have conducted some sort of work that needs to have its impact assessed.
     2. The client then must contact BSDR to create with a bespoke solution to assessing the impact of their work.
     3. The client will then wait for the report which will detail drivers of change, the client can then themselves determine the impact of their work done.
-    4. Alternative flow, chosen alternative path to goal.
-    5. Exceptional flow, unintended path through system.    
+    4. Alternative path would be being a client that doesn't need to assess impact of specific work, but would make use of already documented drivers of change. 
 
 -----
 

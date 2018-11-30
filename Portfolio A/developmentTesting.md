@@ -18,6 +18,8 @@ We will use bottom up [Integration Testing](http://softwaretestingfundamentals.c
  and what doesn't using our knowledge of the system. BSDR testing gives us insight into how the application will be used in the
  real world, exposing bugs or flaws not apparent to our development team.
 
+---
+
 ### Back End Testing
 
 Below is an outline of testing for each module in the application back end:
@@ -31,6 +33,7 @@ Below is an outline of testing for each module in the application back end:
 |DynamicExporter|We will use the `JS Test Driver` in maven to test javascript exports in the visualisation|
 |StaticExporter|We will create a checksum using the image file which will return to `JUnit` tests. By using an online checksum calculator to create tests this process becomes a neat way to check files. This could easily be further developed to a Digital Signature for trusted file sharing|
 
+---
 
 ### Challenges 
 
@@ -42,6 +45,7 @@ Below is an outline of testing for each module in the application back end:
 |Ensuring a full run through of the program can occur without unhandled failure|We will incorporate systems testing in order to verify that all sections from high level design work together. This includes appropiately handling errors that may occur at various points in the execution of the application|
 |Test need to be up to date & inline with the clients needs|We will review & update tests after every sprint we complete. This includes reviewing our testing methodology, with the aim that this scrutiny will expose any problems with our methods before they grow further down the line of development.|
 
+---
  
 ### Frameworks
 

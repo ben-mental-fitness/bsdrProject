@@ -14,7 +14,8 @@ The QuIP provides a straightforward and cost-effective mechanism to ask intended
  of change in their lives, and to analyse and present the data collected. It is used to help organisations assess, learn
  from and demonstrate the social impact of their work. The most important aspect of the QuIP is placing intended beneficiaries'
  voices at the centre of reporting, whilst demonstrating a genuine commitment to learning about what works and what doesn't.
-  
+ 
+ --- 
   
 ### Problem 
 
@@ -25,6 +26,8 @@ The procedure needed to produce a visual report of the data is protracted and th
  Our client requires a software that will not replace Microstrategy but to improve on its causal chain visualisation
  functionality in terms of diagram creation, manipulation and exportation. It should be exported as either a static image
  file to use in reports or an interactive webpage that can be shared with clients.
+
+---
 
 ### Solution 
 

@@ -14,6 +14,7 @@
 - Lead Evaluator (co-ordinates study) - Organise the collection of data, the coding and reporting stages.
 - Evaluation Community - QuiP is a new approach to the collection of qualitative date, the evaluation community ensure that it continues to tackles bias in data collection, and encourages real engagement with findings through the use of innovative interactive data visualisations.
 
+---
 
 ![high-level use-case diagram](usecase.jpg)
 
@@ -38,7 +39,20 @@
 
 ### Main Goal
 
-The main goal of the project is to decrease the time and effort needed to create visualisations for causal chain analysis. In order to achieve this, we need to provide a cross platform application (Windows and macOS) described as follows:
+The main goal of the project is to decrease the time and effort needed to create visualisations for causal chain analysis. In order to achieve this, we need to provide a cross platform application (Windows and macOS).
+
+We will take the following steps to achieve this goal:
+- Create a function which gets all project data from a MySQL database
+- Create a data structure to store project data in a weighted, directed graph
+- Allow simple, one-click filtering of fields in the data set
+- Provide intuitive UI as outlined in the requirements
+
+Cases of exceptional **(e)** or alternative **(a)** flow include:
+- `e` Trying to create a visualisation before importing data. This will result in a message informing the user to first import some data  
+- `e` Trying to export a visualisation before importing data will be handled as above
+- `a` Exporting data before creating a visualisation. This will create a visualisation the export it, without giving the user the chance to edit node positions
+
+----
 
 ### Functional requirements
 1. Loading and storing data:

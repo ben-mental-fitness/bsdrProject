@@ -10,6 +10,7 @@
 |Client Back End|This is the logic of the application. Taking instructions from the UI, the back end retrieves data from AWS, can create causal chain visualisations & export them|
 |AWS Server|External servers hosted by Amazon, which currently store the database of all research carried out by Bath SDR. Data will be retrieved by SQL to be loaded into the causal chain visualisation|
 
+---
 
 ![ERROR: Back End Class Diagram not found](classDiagram.jpg)
 > Back End Structure
@@ -31,6 +32,7 @@ new export types can easily be added in the future as well as new types of visua
 development of these two functionalities may allow Bath SDR to not require the use of MicroStrategy
 making analysis quicker and less complex (meeting our main goal).
 
+---
 
 ![ERROR: Back End Sequence Diagram not found](sequenceDiagram.jpg)
 > Standard flow Use Case

@@ -9,6 +9,7 @@
 |Client Front End|The UI for the application. Users choose which data to retrieve, can manipulate the visualisations & export the causal chain (dynamically or statically)|
 |Client Back End|This is the logic of the application. Taking instructions from the UI, the back end retrieves data from AWS, can create causal chain visualisations & export them|
 |AWS Server|External servers hosted by Amazon, which currently store the database of all research carried out by Bath SDR. Data will be retrieved by SQL to be loaded into the causal chain visualisation|
+|Node.js|||
 
 ---
 

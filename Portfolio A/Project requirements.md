@@ -17,49 +17,64 @@
 
 ![high-level use-case diagram](usecase.jpg)
 
-core set of the use-case goals, list steps involved in achieving each goal. Describe at least one alternative and one exceptional flow.
 ###Achieving Use-Case Goals
 - Reporting - Have a range of useful visualisations to utilise in report for client
     1. Ensure sufficient qualitative data is collected, it is coded correctly and ready to be imported into visualisation software.
-    2. Visualisation software correctly uses the coded data to represents the collected data. It must also have a few variations of ways to display chosen data. 
-    3. Visualisation software exports the visualisation ready for use in the report, there may be multiple export types, static and dynamic.
-    4. An unintended path through system, would be having limited variations of ways to display the data, and only being able to export the visualisation as a static image.
+    1. Visualisation software correctly uses the coded data to represents the collected data. It must also have a few variations of ways to display chosen data. 
+    1. Visualisation software exports the visualisation ready for use in the report, there may be multiple export types, static and dynamic.
+    1. An unintended path through system, would be having limited variations of ways to display the data, and only being able to export the visualisation as a static image.
 - Evaluation Community - To be able to assess process of investigation and the final findings to ensure QuiP is working
     1. Firstly the evaluation community would need to assess the collection of data, and how process of preparing it for use in the visualisation software. The QuiP is a part of this 
     stage and would be under the most scrutiny, to ensure it is working as it should be, to improve the use a qualitative data.
-    2. The evaluation community may be interested in how the visualisation software takes the coded data, and uses it to represent the drivers of change, that is representative of the data originally collected.
-    3. Reporting stage must be successfully completed, to assess the final findings, report, of the investigation.
+    1. The evaluation community may be interested in how the visualisation software takes the coded data, and uses it to represent the drivers of change, that is representative of the data originally collected.
+    1. Reporting stage must be successfully completed, to assess the final findings, report, of the investigation.
 - Client - To be able to assess impact of charitable work done, request BSDR to carry out report.
     1. Firstly they'll need to have conducted some sort of work that needs to have its impact assessed.
-    2. The client then must contact BSDR to create with a bespoke solution to assessing the impact of their work.
-    3. The client will then wait for the report which will detail drivers of change, the client can then themselves determine the impact of their work done.
-    4. Alternative path would be being a client that doesn't need to assess impact of specific work, but would make use of already documented drivers of change. 
+    1. The client then must contact BSDR to create with a bespoke solution to assessing the impact of their work.
+    1. The client will then wait for the report which will detail drivers of change, the client can then themselves determine the impact of their work done.
+    1. Alternative path would be being a client that doesn't need to assess impact of specific work, but would make use of already documented drivers of change. 
 
 -----
 
 ### Main Goal
 
 The main goal of the project is to decrease the time and effort needed to create visualisations for causal chain analysis. In order to achieve this, we need to provide a cross platform application (Windows and macOS) described as follows:
+
 ### Functional requirements
-- data is loaded from a mySQL database
-- data is represented internally as a graph structure that connects drivers to outcomes using weighted edges
-- the data is presented to the user as an interactive directed graph
-- information about the drivers, outcomes and edges is displayed when the user hovers over them
-- the vertices in the graph can be dragged. The metadata about the position of the vertices is maintained  
-- the user can apply filters on the graph (eg. filtering out edges with weights under a certain value)
-- the user can customise the values used as weights on the edges
-- the graph can be saved as an image or interactive webpage
+1. Loading and storing data:
+    1. data is loaded from a mySQL database
+    1. data is represented internally as a graph structure that connects drivers to outcomes using weighted edges
+1. Manipulating the data:
+    1. edges can be filtered out of the visualisations by their weight values
+    1. nodes can be filtered out of the visualisations using column headings from the database
+    1. nodes can be filtered out of the visualisations using specific queries/ key words in data entries
+1. Creating visualisations:
+    1. data is presented to the user as a directed, weighted graph
+    1. the user can move nodes on the graph around to rearrange the visualisation
+    1. information about nodes (drivers, outcomes) is displayed when the user hovers over them
+    1. information about edges is displayed when the user hovers over them
+    1. a vertex can be displayed as both a driver and an outcome
+1. Exporting the visualisations:
+    1. the graph can be  exported as a static image file e.g. .png
+    1. the graph can be exported as an interactive file e.g. .html/.js
 
 ### Non-functional requirements
-
-- the application has an easy to use interface
-- a vertex can be both a driver and an outcome, i.e. an outcome can have a driver, but can in turn be a driver for another outcome
-- the graph can be cyclic
-- the graph will be displayed in an intuitive way, grouping drivers and outcomes into stories
-
+1. User Interface
+    1. Use of all features of the program can be learnt within 1 hour from a guide
+    1. The general flow of drivers to outcomes in the visualisation will be left to right
+1. Maintainability & Extendability
+    1. The underlying structure of the data will allow it to be used in different ways by allowing different types of connections between nodes in graphs
+    1. The data strucutre for each node will allow any number of nodes to be implemented in a graph
+1. Security
+    1. Standard security protocols will be used to retrieve data from MySql database
+    1. Exportation of the visualisations will be accompanied with a checksum(MD5) for safe file sharing
+    1. No local data relating to QuIP research will be stored after the application is exited
+1. Performance
+    1. Data will be loaded from MySQL within 10 seconds on a 25Mbps network for a project with 24 interviewees (standard for QuIP methodology)
+    1. Visualisations will be created within 15 seconds for the 24 interviewees
+    1. All visualisations will be exported within 15 seconds
 
 
 #### References
 
-[BathSDR](http://bathsdr.org/)
-Accessed on : 09/11/18
+[_Bath Social & Development Research Ltd._](http://bathsdr.org/) 09/11/18

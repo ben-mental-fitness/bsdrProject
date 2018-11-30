@@ -8,8 +8,8 @@ Our testing strategy is to use test driven development. We will begin by creatin
  _i.e. code is only written to complete a test._ 
  
 We will use bottom up [Integration Testing](http://softwaretestingfundamentals.com/integration-testing/) to test small
- groups of modules and functionality before building up to [Systems Testing]( groups of modules and functionality before building up to [Systems Testing](http://softwaretestingfundamentals.com/system-testing/).
- We will use Black Box Testing[_(BBt)_](http://softwaretestingfundamentals.com/black-box-testing/) for this, allowing us
+ groups of modules and functionality before building up to [Systems Testing](http://softwaretestingfundamentals.com/system-testing/).
+ We will use Black Box Testing [_(BBt)_](http://softwaretestingfundamentals.com/black-box-testing/) for this, allowing us
  more accurately simulate real use of the entire system and to see how ouur program handles exceptional flow.
  
 [Acceptance Testing](http://softwaretestingfundamentals.com/acceptance-testing/) will be implemented through user testing.
@@ -24,12 +24,12 @@ Below is an outline of testing for each module in the application back end:
 
 |Module | Test |
 |:---:|:---:|
-|QuIPv|White Box Testing [_(WBt)_](http://softwaretestingfundamentals.com/white-box-testing/) using JUnit. Tests created beforehand to account for boundary & erroneous cases test driven development [_(tdd)_](http://agiledata.org/essays/tdd.html)|
-|DataNode|Simple JUnit module for testing getter & setter functionality|
+|QuIPv|White Box Testing [_(WBt)_](http://softwaretestingfundamentals.com/white-box-testing/) using `JUnit`. Tests created beforehand to account for boundary & erroneous cases test driven development [_(tdd)_](http://agiledata.org/essays/tdd.html)|
+|DataNode|Simple `JUnit` module for testing getter & setter functionality|
 |SQLDataFetcher|Instead of testing SQL directly we will use the return values in java to test like QuIPv|
-|DynamicVisualiser|We will use JUnit to test the logic of the visualisations. On the UI side a JFx Test Driver will be used to look for erroneous inputs|
-|DynamicExporter|We will use the JS Test Driver in maven to test javascript exports in the visualisation|
-|StaticExporter|We will create a checksum using the image file which will return to JUnit tests. By using an online checksum calculator to create tests this process becomes a neat way to check files. This could easily be further developed to a Digital Signature for trusted file sharing|
+|DynamicVisualiser|We will use `JUnit` to test the logic of the visualisations. On the UI side a `JFx Test Driver` will be used to look for erroneous inputs|
+|DynamicExporter|We will use the `JS Test Driver` in maven to test javascript exports in the visualisation|
+|StaticExporter|We will create a checksum using the image file which will return to `JUnit` tests. By using an online checksum calculator to create tests this process becomes a neat way to check files. This could easily be further developed to a Digital Signature for trusted file sharing|
 
 
 ### Challenges 

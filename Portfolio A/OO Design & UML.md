@@ -23,8 +23,8 @@ which can be accomplished through limited functionality a bespoke solution can a
 the system only does what it will be used for.
 
 The back end of the system needs to be clearly set out, in order to allow for expansion of functionality
-or increased data set size & scalability in the future. This is why the 'DataNode' structure is used,
-which can easily link drivers to outcomes implemented as an ArrayList in 'QuIPv.'
+or increased data set size & scalability in the future. This is why the `DataNode` structure is used,
+which can easily link drivers to outcomes implemented as an `ArrayList` in `QuIPv`.
 
 Splitting the exports into seperate classes while providing a base visualiser class means
 new export types can easily be added in the future as well as new types of visualisation. The
@@ -36,7 +36,7 @@ making analysis quicker and less complex (meeting our main goal).
 > Standard flow Use Case
 
 This diagram is based on a standard use case for our application. We start by choosing a study to
-load in, before fetching it from AWS & storing it in 'DataNodes'. The required fields are selected
+load in, before fetching it from AWS & storing it in `DataNodes`. The required fields are selected
 by the user, before they create the visualisation. After the visualisation is made it can be edited,
 before being exported (statically in this case).
 

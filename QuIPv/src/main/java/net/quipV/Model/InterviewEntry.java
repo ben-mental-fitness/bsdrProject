@@ -2,19 +2,23 @@ package net.quipV.Model;
 
 import java.util.function.Consumer;
 
+/**
+ *Structure for internal storing of 1 entry from database
+ */
 public class InterviewEntry {
 
-    private final int questionID;
+    private final String questionID;
     private final String question;
-    private final int respondentID;
+    private final String respondentID;
     private final String fullAnswer;
     private final String brokenAnswer;
     private final String driver;
     private final String primaryOutcome;
     private final String secondaryOutcome;
     private final String tertiaryOutcome;
+    private final String projectName;
 
-    public InterviewEntry(Builder builder) {
+    public InterviewEntry(InterviewEntryBuilder builder) {
         this.questionID = builder.questionID;
         this.question = builder.question;
         this.respondentID = builder.respondentID;
@@ -24,31 +28,35 @@ public class InterviewEntry {
         this.primaryOutcome = builder.primaryOutcome;
         this.secondaryOutcome = builder.secondaryOutcome;
         this.tertiaryOutcome = builder.tertiaryOutcome;
+        this.projectName = builder.projectName;
     }
 
-    public static class Builder {
-        public int questionID;
+
+    public static class InterviewEntryBuilder {
+        public String questionID;
         public String question;
-        public int respondentID;
+        public String respondentID;
         public String fullAnswer;
         public String brokenAnswer;
         public String driver;
         public String primaryOutcome;
         public String secondaryOutcome;
         public String tertiaryOutcome;
+        public String projectName;
+
 
         public InterviewEntry build() {
             return new InterviewEntry(this);
         }
 
-        public Builder with(Consumer<Builder> func){
+        public InterviewEntryBuilder with(Consumer<InterviewEntryBuilder> func){
             func.accept(this);
             return this;
         }
 
     }
 
-    public int getQuestionID() {
+    public String getQuestionID() {
         return questionID;
     }
 
@@ -56,7 +64,7 @@ public class InterviewEntry {
         return question;
     }
 
-    public int getRespondentID() {
+    public String getRespondentID() {
         return respondentID;
     }
 
@@ -83,6 +91,24 @@ public class InterviewEntry {
 
     public String getTertiaryOutcome() {
         return tertiaryOutcome;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public String toString(){
+        return "Interview entry with:" +
+                "\n questionID = " + this.questionID +
+                "\n question = " + this.question +
+                "\n respondentID = " + this.respondentID +
+                "\n full answer = " + this.fullAnswer +
+                "\n broken answr = " + this.brokenAnswer +
+                "\n driver = " + this.driver +
+                "\n primary outcome = " + this.primaryOutcome +
+                "\n secondary outcome = " + this.secondaryOutcome +
+                "\n tertiary outcome = " + this.tertiaryOutcome +
+                "\n project name = " + this.projectName + "\n";
     }
 
 }

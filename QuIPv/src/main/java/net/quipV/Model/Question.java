@@ -6,7 +6,6 @@ package net.quipV.Model;
  *Flag for if the question should be shown in the vis
  */
 
-import java.util.*;
 import java.util.function.Consumer;
 
 public class Question {

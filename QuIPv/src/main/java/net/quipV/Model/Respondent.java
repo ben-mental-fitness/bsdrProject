@@ -5,7 +5,6 @@ package net.quipV.Model;
  *Contains basic logic & getter/setter functions
  */
 
-import java.util.*;
 import java.util.function.Consumer;
 
 public class Respondent {

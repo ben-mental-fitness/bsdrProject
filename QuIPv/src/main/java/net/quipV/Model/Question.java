@@ -7,16 +7,32 @@ package net.quipV.Model;
  */
 
 import java.util.*;
+import java.util.function.Consumer;
 
 public class Question {
     private final int questionID;
     private final String text;
     private boolean showInVis;
 
-    public Question(int questionID, String text) {
-        this.questionID = questionID;
-        this.text = text;
+    public Question(QuestionBuilder builder) {
+        this.questionID = builder.questionID;
+        this.text = builder.text;
         showInVis = true;
+    }
+
+    public static class QuestionBuilder {
+        public int questionID;
+        public String text;
+
+        public Question build() {
+            return new Question(this);
+        }
+
+        public QuestionBuilder with(Consumer<QuestionBuilder> func){
+            func.accept(this);
+            return this;
+        }
+
     }
 
     public int getQuestionID() {

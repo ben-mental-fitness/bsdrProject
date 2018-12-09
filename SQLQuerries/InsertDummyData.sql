@@ -1,4 +1,4 @@
-INSERT INTO sdr_live_maintable (
+INSERT INTO SDR_LIVE_MainTable (
 	SourceFileinstanceID,
     row_id, 
     InterviewType,
@@ -89,7 +89,7 @@ VALUES (
 );
 
 
-INSERT INTO sdr_live_dataentry
+INSERT INTO SDR_LIVE_DataEntry
 VALUES (
 	'Dummy question number 1',
     'Dummy question 1',
@@ -121,7 +121,7 @@ VALUES (
     'Dummy ProjectName 3'
 );
 
-INSERT INTO sdr_live_tagging
+INSERT INTO SDR_LIVE_Tagging
 VALUES (
 	'Code 1',
     'Dummy description 1',

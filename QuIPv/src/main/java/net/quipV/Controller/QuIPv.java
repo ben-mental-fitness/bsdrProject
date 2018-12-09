@@ -23,7 +23,6 @@ public class QuIPv
         for (InterviewEntry interviewEntry : interiewEntries) {
             System.out.println(interviewEntry);
         }
-
     }
 
     private static List<InterviewEntry> populateInterviewEntries() {

@@ -11,11 +11,13 @@ public class GraphNode {
     private String name;
     private int count;
     private ArrayList<Respondent> respondents;
+    private ArrayList<GraphNode> outcomes;
 
-    public GraphNode(String name, int count, ArrayList<Respondent> respondents) {
+    public GraphNode(String name, int count, ArrayList<Respondent> respondents, ArrayList<GraphNode> outcomes) {
         this.name = name;
         this.count = count;
         this.respondents = respondents;
+        this.outcomes = outcomes;
     }
 
     public String getName() {
@@ -30,6 +32,8 @@ public class GraphNode {
         return respondents;
     }
 
+    public ArrayList<GraphNode> getOutcomes() {return outcomes;}
+
     public void setName(String name) {
         this.name = name;
     }
@@ -42,4 +46,6 @@ public class GraphNode {
     public void setRespondents(ArrayList<Respondent> respondents) {
         this.respondents = respondents;
     }
+
+    public void setOutcomes(ArrayList<GraphNode> outcomes) {this.outcomes = outcomes;}
 }

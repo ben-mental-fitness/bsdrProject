@@ -6,20 +6,32 @@ package net.quipV.Model;
  */
 
 import java.util.*;
+import java.util.function.Consumer;
 
 public class Respondent {
-    private final ArrayList<Answer> answers;
     private final int respondentID;
     private final String interviewType;
+    private boolean showInVis;
 
-    public Respondent(ArrayList<Answer> answers, int respondentID, String interviewType) {
-        this.answers = answers;
-        this.respondentID = respondentID;
-        this.interviewType = interviewType;
+    public Respondent(RespondentBuilder builder) {
+        this.respondentID = builder.respondentID;
+        this.interviewType = builder.interviewType;
+        showInVis = true;
     }
 
-    public ArrayList<Answer> getAnswers() {
-        return answers;
+    public static class RespondentBuilder {
+        public int respondentID;
+        public String interviewType;
+
+        public Respondent build() {
+            return new Respondent(this);
+        }
+
+        public RespondentBuilder with(Consumer<RespondentBuilder> func){
+            func.accept(this);
+            return this;
+        }
+
     }
 
     public int getRespondentID() {
@@ -28,5 +40,13 @@ public class Respondent {
 
     public String getInterviewType() {
         return interviewType;
+    }
+
+    public boolean isShowInVis() {
+        return showInVis;
+    }
+
+    public void setShowInVis(boolean showInVis) {
+        this.showInVis = showInVis;
     }
 }

@@ -31,7 +31,7 @@ public class QuIPv
         try {
             Connection myConnection = MySQLConnection.getInstance().getConnection();
             Statement stmt = myConnection.createStatement();
-            ResultSet rs=stmt.executeQuery("select * from sdr_live_maintable");
+            ResultSet rs=stmt.executeQuery("select * from SDR_LIVE_MainTable");
             while(rs.next()){
                 InterviewEntry interviewEntry = new InterviewEntry.InterviewEntryBuilder().with($ -> {
                     try {

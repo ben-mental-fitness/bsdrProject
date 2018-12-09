@@ -6,18 +6,33 @@ package net.quipV.Model;
  */
 
 import java.util.*;
+import java.util.function.Consumer;
 
 public class GraphNode {
     private String name;
     private int count;
-    private ArrayList<Respondent> respondents;
-    private ArrayList<GraphNode> outcomes;
+    private ArrayList<Neighbour> neighbours;
 
-    public GraphNode(String name, int count, ArrayList<Respondent> respondents, ArrayList<GraphNode> outcomes) {
-        this.name = name;
-        this.count = count;
-        this.respondents = respondents;
-        this.outcomes = outcomes;
+    public GraphNode(NodeBuilder builder) {
+        this.name = builder.name;
+        this.count = builder.count;
+        this.neighbours = builder.neighbours;
+    }
+
+    public static class NodeBuilder {
+        public String name;
+        public int count;
+        public ArrayList<Neighbour> neighbours;
+
+        public GraphNode build() {
+            return new GraphNode(this);
+        }
+
+        public NodeBuilder with(Consumer<NodeBuilder> func){
+            func.accept(this);
+            return this;
+        }
+
     }
 
     public String getName() {
@@ -28,24 +43,13 @@ public class GraphNode {
         return count;
     }
 
-    public ArrayList<Respondent> getRespondents() {
-        return respondents;
-    }
-
-    public ArrayList<GraphNode> getOutcomes() {return outcomes;}
+    public ArrayList<Neighbour> getNeighbours() {return neighbours;}
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-        //this.count = respondents.size();
-    }
+    public void setCount(int count) {this.count = count;}
 
-    public void setRespondents(ArrayList<Respondent> respondents) {
-        this.respondents = respondents;
-    }
-
-    public void setOutcomes(ArrayList<GraphNode> outcomes) {this.outcomes = outcomes;}
+    public void setNeighbours(ArrayList<Neighbour> neighbours) {this.neighbours = neighbours;}
 }

@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 
 public class Answer {
     private final String fullAnswer;
-    private final ArrayList<String> brokenAnswer;
+    private final String brokenAnswer;
     private final ArrayList<String> outcome;
     private final String driver;
     private final int respondentID;
@@ -27,7 +27,7 @@ public class Answer {
 
     public static class AnswerBuilder {
         public String fullAnswer;
-        public ArrayList<String> brokenAnswer;
+        public String brokenAnswer;
         public ArrayList<String> outcome;
         public String driver;
         public int respondentID;
@@ -49,7 +49,7 @@ public class Answer {
         return fullAnswer;
     }
 
-    public ArrayList<String> getBrokenAnswer() {
+    public String getBrokenAnswer() {
         return brokenAnswer;
     }
 

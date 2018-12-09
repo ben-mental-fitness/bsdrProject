@@ -8,7 +8,7 @@ package net.quipV.Model;
 
 import java.util.function.Consumer;
 
-public class Question {
+public class Question implements Comparable<Question> {
     private final int questionID;
     private final String text;
     private boolean showInVis;
@@ -48,5 +48,11 @@ public class Question {
 
     public void setShowInVis(boolean showInVis) {
         this.showInVis = showInVis;
+    }
+
+    //@Override
+    public int compareTo(Question q) {
+        int compareID=q.getQuestionID();
+        return this.questionID-compareID;
     }
 }

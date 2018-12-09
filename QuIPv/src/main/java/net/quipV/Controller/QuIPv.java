@@ -38,6 +38,7 @@ public class QuIPv
             while(rs.next()){
                 InterviewEntry interviewEntry = new InterviewEntry.InterviewEntryBuilder().with($ -> {
                     try {
+                        $.interviewType = rs.getString(3);
                         $.respondentID = rs.getString(4);
                         $.questionID = rs.getString(5);
                         $.question = rs.getString(6);
@@ -97,7 +98,7 @@ public class QuIPv
             Respondent r = new Respondent.RespondentBuilder().with($ -> {
                 try {
                     $.respondentID = Integer.parseInt(interviewEntry.getRespondentID());
-                    //$.interviewType = interviewEntry.getQuestion();
+                    $.interviewType = interviewEntry.getInterviewType();
                 } catch (Exception e){ System.out.println("Exception in lambda" + e);}
             }).build();
             respondents.add(r);

@@ -9,18 +9,18 @@ import java.util.function.Consumer;
 
 public class Respondent implements Comparable<Respondent> {
     private final int respondentID;
-    //private final String interviewType;
+    private final String interviewType;
     private boolean showInVis;
 
     public Respondent(RespondentBuilder builder) {
         this.respondentID = builder.respondentID;
-        //this.interviewType = builder.interviewType;
+        this.interviewType = builder.interviewType;
         showInVis = true;
     }
 
     public static class RespondentBuilder {
         public int respondentID;
-        //public String interviewType;
+        public String interviewType;
 
         public Respondent build() {
             return new Respondent(this);
@@ -37,7 +37,7 @@ public class Respondent implements Comparable<Respondent> {
         return respondentID;
     }
 
-    //public String getInterviewType() {return interviewType;}
+    public String getInterviewType() {return interviewType;}
 
     public boolean isShowInVis() {
         return showInVis;

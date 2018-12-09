@@ -10,6 +10,7 @@ public class InterviewEntry {
     private final String questionID;
     private final String question;
     private final String respondentID;
+    private final String interviewType;
     private final String fullAnswer;
     private final String brokenAnswer;
     private final String driver;
@@ -22,6 +23,7 @@ public class InterviewEntry {
         this.questionID = builder.questionID;
         this.question = builder.question;
         this.respondentID = builder.respondentID;
+        this.interviewType = builder.interviewType;
         this.fullAnswer = builder.fullAnswer;
         this.brokenAnswer = builder.brokenAnswer;
         this.driver = builder.driver;
@@ -36,6 +38,7 @@ public class InterviewEntry {
         public String questionID;
         public String question;
         public String respondentID;
+        public String interviewType;
         public String fullAnswer;
         public String brokenAnswer;
         public String driver;
@@ -68,6 +71,7 @@ public class InterviewEntry {
         return respondentID;
     }
 
+    public String getInterviewType() {return interviewType;}
 
     public String getFullAnswer() {
         return fullAnswer;

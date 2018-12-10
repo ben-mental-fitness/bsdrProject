@@ -4,5 +4,5 @@ module gui {
     requires javafx.fxml;
     requires java.sql;
     exports Controllers;
-    opens net.spe.gui to javafx.graphics;
+    opens net.quipv.gui to javafx.graphics;
 }

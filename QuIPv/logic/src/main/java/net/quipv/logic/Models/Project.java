@@ -35,6 +35,22 @@ public class Project {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+
+    public ArrayList<Answer> getAnswers() {
+        return answers;
+    }
+
+    public ArrayList<Respondent> getRespondents() {
+        return respondents;
+    }
+
     public String toString(){
         StringBuilder returnString = new StringBuilder("Questions: ");
         for (Question q : this.questions) {

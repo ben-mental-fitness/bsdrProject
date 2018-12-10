@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 public class Answer {
     private final String fullAnswer;
     private final String brokenAnswer;
-    private final ArrayList<String> outcome;
+    private final ArrayList<String> outcomes;
     private final String driver;
     private final int respondentID;
     private final int questionID;
@@ -19,7 +19,7 @@ public class Answer {
     public Answer(AnswerBuilder builder) {
         this.fullAnswer = builder.fullAnswer;
         this.brokenAnswer = builder.brokenAnswer;
-        this.outcome = builder.outcome;
+        this.outcomes = builder.outcomes;
         this.driver = builder.driver;
         this.respondentID = builder.respondentID;
         this.questionID = builder.questionID;
@@ -28,7 +28,7 @@ public class Answer {
     public static class AnswerBuilder {
         public String fullAnswer;
         public String brokenAnswer;
-        public ArrayList<String> outcome;
+        public ArrayList<String> outcomes;
         public String driver;
         public int respondentID;
         public int questionID;
@@ -54,7 +54,7 @@ public class Answer {
     }
 
     public ArrayList<String> getOutcome() {
-        return outcome;
+        return outcomes;
     }
 
     public String getDriver() {

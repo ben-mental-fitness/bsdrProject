@@ -75,11 +75,11 @@ public class ProjectHelper {
             Answer a = new Answer.AnswerBuilder().with( $ -> {
                 try {
                     $.fullAnswer =interviewEntry.getFullAnswer();
-                    $.brokenAnswer= interviewEntry.getBrokenAnswer();
-                    $.outcome= outcomes;
-                    $.driver= interviewEntry.getDriver();
-                    $.respondentID= Integer.parseInt(interviewEntry.getRespondentID());
-                    $.questionID= Integer.parseInt(interviewEntry.getQuestionID());
+                    $.brokenAnswer = interviewEntry.getBrokenAnswer();
+                    $.outcomes = outcomes;
+                    $.driver = interviewEntry.getDriver();
+                    $.respondentID = Integer.parseInt(interviewEntry.getRespondentID());
+                    $.questionID = Integer.parseInt(interviewEntry.getQuestionID());
                 } catch (Exception e){ System.out.println("Exception in lambda" + e);}
             }).build();
             answers.add(a);

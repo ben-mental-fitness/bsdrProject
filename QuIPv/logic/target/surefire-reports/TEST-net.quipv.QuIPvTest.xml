@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="net.quipv.QuIPvTest" time="0.016" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="net.quipv.QuIPvTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.2.7"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.1+13-LTS"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Code\bsdrProject\quipv alt"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Code\bsdrProject\QuIPv"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Code\bsdrProject\quipv alt"/>
+    <property name="user.dir" value="D:\Code\bsdrProject\QuIPv"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="11.0.1+13-LTS"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -62,5 +62,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="net.quipv.QuIPvTest" name="testApp" time="0.016"/>
+  <testcase classname="net.quipv.QuIPvTest" name="testApp" time="0"/>
 </testsuite>

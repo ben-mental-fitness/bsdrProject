@@ -53,7 +53,7 @@ public class Answer {
         return brokenAnswer;
     }
 
-    public ArrayList<String> getOutcome() {
+    public ArrayList<String> getOutcomes() {
         return outcomes;
     }
 

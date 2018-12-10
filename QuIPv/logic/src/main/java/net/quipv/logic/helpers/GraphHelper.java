@@ -1,4 +1,4 @@
-package helpers;
+package net.quipv.logic.helpers;
 
 import net.quipv.logic.Models.Answer;
 import net.quipv.logic.Models.Graph;

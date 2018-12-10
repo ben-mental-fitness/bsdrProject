@@ -1,6 +1,6 @@
 package net.quipv.gui;
 
-import helpers.ProjectHelper;
+import net.quipv.logic.helpers.ProjectHelper;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

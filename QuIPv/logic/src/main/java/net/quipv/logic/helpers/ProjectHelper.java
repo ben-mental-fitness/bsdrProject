@@ -1,4 +1,4 @@
-package helpers;
+package net.quipv.logic.helpers;
 
 import net.quipv.logic.DBO.MySQLConnection;
 import net.quipv.logic.Models.*;

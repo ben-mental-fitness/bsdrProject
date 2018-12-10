@@ -21,6 +21,7 @@ public class GUIMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         //where window is the parent of every scene
         //i.e. all scenes play on window
         window = primaryStage;
@@ -28,8 +29,8 @@ public class GUIMain extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/introScene.fxml"));
         Parent root2 = FXMLLoader.load(getClass().getResource("/Views/mainScene.fxml"));
 
-        introScene = new Scene(root, 754, 573);
-        mainScene = new Scene(root2, 754, 573);
+        introScene = new Scene(root, Infinity, Infinity);
+        mainScene = new Scene(root2, Infinity, Infinity);
 
         primaryStage.setTitle("QuipV");
         primaryStage.setScene(introScene);
@@ -48,7 +49,7 @@ public class GUIMain extends Application {
     }
 
     private static List<InterviewEntry> populateInterviewEntries() {
-        List<InterviewEntry> interiewEntries = new LinkedList<>();
+        List<InterviewEntry> interviewEntries = new LinkedList<>();
         try {
             Connection myConnection = MySQLConnection.getInstance().getConnection();
             Statement stmt = myConnection.createStatement();
@@ -70,7 +71,7 @@ public class GUIMain extends Application {
                     } catch (Exception e){ System.out.println("Exception in lambda" + e);}
 
                 }).build();
-                interiewEntries.add(interviewEntry);
+                interviewEntries.add(interviewEntry);
             }
 
             myConnection.close();
@@ -78,16 +79,16 @@ public class GUIMain extends Application {
 
         }catch (Exception e){System.out.println(e);}
 
-        return interiewEntries;
+        return interviewEntries;
     }
 
-    private static Project populateProject(List<InterviewEntry> interiewEntries, String projectName) {
+    private static Project populateProject(List<InterviewEntry> interviewEntries, String projectName) {
         Project project;
         ArrayList<Question> questions = new ArrayList<Question>();
         ArrayList<Answer> answers = new ArrayList<Answer>();
         ArrayList<Respondent> respondents= new ArrayList<Respondent>();
 
-        for (InterviewEntry interviewEntry : interiewEntries) {
+        for (InterviewEntry interviewEntry : interviewEntries) {
             Question q = new Question.QuestionBuilder().with($ -> {
                 try {
                     $.questionID = Integer.parseInt(interviewEntry.getQuestionID());

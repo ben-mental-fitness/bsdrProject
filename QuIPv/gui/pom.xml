@@ -17,6 +17,7 @@
             <groupId>net.spe</groupId>
             <artifactId>logic</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.controlsfx</groupId>

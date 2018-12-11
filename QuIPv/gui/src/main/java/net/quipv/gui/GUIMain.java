@@ -1,17 +1,13 @@
 package net.quipv.gui;
 
+import net.quipv.logic.helpers.ProjectHelper;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import net.quipv.logic.DBO.MySQLConnection;
 import net.quipv.logic.Models.*;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.*;
 
 public class GUIMain extends Application {
 
@@ -36,18 +32,15 @@ public class GUIMain extends Application {
         primaryStage.setScene(introScene);
         primaryStage.show();
 
-        List<InterviewEntry> interviewEntries = populateInterviewEntries();
-
-        Project project = populateProject(interviewEntries,interviewEntries.get(0).getProjectName());
 
 
-        for (InterviewEntry interviewEntry : interviewEntries) {
-            System.out.println(interviewEntry);
-        }
+        Project project = ProjectHelper.populate();
 
-//        System.out.println(project);
+
+        System.out.println(project);
     }
 
+<<<<<<< HEAD
     private static List<InterviewEntry> populateInterviewEntries() {
         List<InterviewEntry> interviewEntries = new LinkedList<>();
         try {
@@ -147,6 +140,10 @@ public class GUIMain extends Application {
 
         return project;
     }
+=======
+
+
+>>>>>>> master
 
     public static void main(String[] args) {
         launch(args);

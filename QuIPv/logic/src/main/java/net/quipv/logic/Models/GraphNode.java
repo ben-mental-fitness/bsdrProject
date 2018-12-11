@@ -40,7 +40,7 @@ public class GraphNode {
             Integer currentWeight = this.neighbours.get(neighbour);
             this.neighbours.replace(neighbour, currentWeight + weight);
         }
-        this.neighbours.put(neighbour, neighbour.getCount());
+        this.neighbours.put(neighbour, weight);
     }
     public String getName() {
         return name;

@@ -3,11 +3,12 @@ package net.quipv;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import net.quipv.logic.Models.Graph;
 
 /**
  * Unit test for simple App.
  */
-public class QuIPvTest
+public class GraphTest
     extends TestCase
 {
     /**
@@ -15,7 +16,7 @@ public class QuIPvTest
      *
      * @param testName name of the test case
      */
-    public QuIPvTest( String testName )
+    public GraphTest(String testName )
     {
         super( testName );
     }
@@ -25,15 +26,16 @@ public class QuIPvTest
      */
     public static Test suite()
     {
-        return new TestSuite( QuIPvTest.class );
+        return new TestSuite( GraphTest.class );
     }
 
 
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testAddNode()
     {
-        assertTrue(true);
+        Graph graph = new Graph();
+
     }
 }

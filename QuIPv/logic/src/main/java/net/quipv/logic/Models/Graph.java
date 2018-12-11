@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Graph extends ArrayList<GraphNode> {
+    
+    // A graph stores a set of all the node names in order to keep all the nodes unique
     private Set<String> nodes;
 
     public Graph(){

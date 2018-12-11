@@ -4,6 +4,9 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import net.quipv.logic.Models.Graph;
+import net.quipv.logic.Models.GraphNode;
+
+import java.util.List;
 
 /**
  * Unit test for simple App.
@@ -36,6 +39,13 @@ public class GraphTest
     public void testAddNode()
     {
         Graph graph = new Graph();
+        GraphNode node = new GraphNode.NodeBuilder().with($ -> {
+                        $.count = 1;
+                        $.name = "Test node 1";
+                }).build();
 
+        graph.addNode(node);
+
+        assertEquals( "Test node 1", graph.getVertices().get(0).getName());
     }
 }

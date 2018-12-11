@@ -11,18 +11,17 @@ import java.util.function.Consumer;
 public class GraphNode {
     private String name;
     private int count;
-    private HashMap<GraphNode, Integer> neighbours;
+    private ArrayList<Neighbour> neighbours;
 
     public GraphNode(NodeBuilder builder) {
         this.name = builder.name;
         this.count = builder.count;
-        this.neighbours = builder.neighbours;
+        this.neighbours = new ArrayList<>();
     }
 
     public static class NodeBuilder {
         public String name;
         public int count;
-        public HashMap<GraphNode, Integer> neighbours;
 
         public GraphNode build() {
             return new GraphNode(this);
@@ -35,12 +34,15 @@ public class GraphNode {
 
     }
 
-    public void addNeighbour(GraphNode neighbour, Integer weight){
-        if(this.neighbours.containsKey(neighbour)){
-            Integer currentWeight = this.neighbours.get(neighbour);
-            this.neighbours.replace(neighbour, currentWeight + weight);
+    public void addNeighbour(GraphNode node, Integer weight){
+        Neighbour neighbour = new Neighbour(node, weight);
+        Integer neighbourIndex = this.neighbours.indexOf(neighbour);
+        if(neighbourIndex != -1){
+            Integer currentWeight = this.neighbours.get(neighbourIndex).weight;
+            neighbour.weight += currentWeight;
+            this.neighbours.set(neighbourIndex, neighbour);
         }
-        this.neighbours.put(neighbour, weight);
+        this.neighbours.add(neighbour);
     }
     public String getName() {
         return name;
@@ -50,13 +52,10 @@ public class GraphNode {
         return count;
     }
 
-    public HashMap<GraphNode, Integer> getNeighbours() {return neighbours;}
-
     public void setName(String name) {
         this.name = name;
     }
 
     public void setCount(int count) {this.count = count;}
 
-    public void setNeighbours(HashMap<GraphNode, Integer> neighbours) {this.neighbours = neighbours;}
 }

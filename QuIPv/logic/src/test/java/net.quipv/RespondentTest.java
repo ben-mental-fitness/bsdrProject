@@ -33,7 +33,7 @@ public class RespondentTest
     /**
      * Rigourous Test :-)
      */
-    public void testCreateQuestion()
+    public void testCreateRespondent()
     {
 
        Respondent respondent1 = new Respondent.RespondentBuilder().with($ -> {

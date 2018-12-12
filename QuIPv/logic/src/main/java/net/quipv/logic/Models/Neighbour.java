@@ -8,4 +8,15 @@ public class Neighbour {
         this.node = node;
         this.weight = weight;
     }
+
+    @Override
+    public boolean equals(Object o){
+
+        return this.node == o;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.node.hashCode();
+    }
 }

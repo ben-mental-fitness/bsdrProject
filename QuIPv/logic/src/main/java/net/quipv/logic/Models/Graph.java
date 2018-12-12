@@ -35,10 +35,6 @@ public class Graph extends ArrayList<GraphNode> {
         }
     }
 
-    public Set<GraphNode> getVerticesSet() {
-        return verticesSet;
-    }
-
     public List<GraphNode> getVertices() {
         return vertices;
     }

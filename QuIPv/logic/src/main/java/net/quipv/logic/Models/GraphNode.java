@@ -13,25 +13,10 @@ public class GraphNode {
     private int count;
     private ArrayList<Neighbour> neighbours;
 
-    public GraphNode(NodeBuilder builder) {
-        this.name = builder.name;
-        this.count = builder.count;
+    public GraphNode(String name, int count) {
+        this.name = name;
+        this.count = count;
         this.neighbours = new ArrayList<>();
-    }
-
-    public static class NodeBuilder {
-        public String name;
-        public int count;
-
-        public GraphNode build() {
-            return new GraphNode(this);
-        }
-
-        public NodeBuilder with(Consumer<NodeBuilder> func){
-            func.accept(this);
-            return this;
-        }
-
     }
 
     public void addNeighbour(GraphNode node, Integer weight){
@@ -44,6 +29,7 @@ public class GraphNode {
         }
         this.neighbours.add(neighbour);
     }
+
     public String getName() {
         return name;
     }
@@ -57,5 +43,30 @@ public class GraphNode {
     }
 
     public void setCount(int count) {this.count = count;}
+
+    public ArrayList<Neighbour> getNeighbours() {
+        return neighbours;
+    }
+
+    @Override
+    public boolean equals(Object o){
+
+        if(o == this){
+            return true;
+        }
+
+        if(!(o instanceof GraphNode)){
+            return false;
+        }
+
+        GraphNode node = (GraphNode) o;
+
+        return this.name == node.getName();
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
+    }
 
 }

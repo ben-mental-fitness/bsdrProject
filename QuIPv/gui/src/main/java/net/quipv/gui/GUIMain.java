@@ -27,11 +27,6 @@ public class GUIMain extends Application {
         primaryStage.setTitle("QuipV");
         primaryStage.setScene(menuScene);
         primaryStage.show();
-
-        Project project = ProjectHelper.populate();
-
-
-        System.out.println(project);
     }
 
     public static void main(String[] args) {

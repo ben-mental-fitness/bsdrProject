@@ -13,7 +13,7 @@
    <children>
       <ToolBar prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
         <items>
-          <Button mnemonicParsing="false" text="Button" />
+          <Button fx:id="visButton" mnemonicParsing="false" onAction="#visOpen" text="Open Visualisation" />
         </items>
       </ToolBar>
       <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -58,9 +58,9 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="visButton" layoutX="247.0" layoutY="222.0" mnemonicParsing="false" onAction="#visOpen" prefWidth="150.0" text="Go to Visualisation" />
-               </children></AnchorPane>
-            
+                   <Button fx:id="visButton" mnemonicParsing="false" onAction="#visOpen" text="Open Visualisation" />
+               </children>
+          </AnchorPane>
         </items>
       </SplitPane>
    </children>

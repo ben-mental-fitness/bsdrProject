@@ -12,7 +12,7 @@ import net.quipv.logic.Models.*;
 public class GUIMain extends Application {
 
     Stage window;
-    Scene menuScene, mainScene;
+    Scene menuScene;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -20,7 +20,6 @@ public class GUIMain extends Application {
         window = primaryStage;
 
         Parent root = FXMLLoader.load(getClass().getResource("/Views/MainMenu.fxml"));
-        Parent root2 = FXMLLoader.load(getClass().getResource("/Views/MainScene.fxml"));
 
         menuScene = new Scene(root, 754, 573);
 
@@ -28,10 +27,8 @@ public class GUIMain extends Application {
         primaryStage.setScene(menuScene);
         primaryStage.show();
 
-        Project project = ProjectHelper.populate();
-
-
-        System.out.println(project);
+        //Project project = ProjectHelper.populate();
+        //System.out.println(project);
     }
 
     public static void main(String[] args) {

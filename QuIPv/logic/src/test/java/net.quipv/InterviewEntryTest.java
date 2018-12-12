@@ -6,7 +6,7 @@ import junit.framework.TestSuite;
 import net.quipv.logic.Models.InterviewEntry;
 
 /**
- * Unit test for Answer module.
+ * Unit test for InterviewEntry module.
  */
 public class InterviewEntryTest
         extends TestCase
@@ -33,7 +33,7 @@ public class InterviewEntryTest
     /**
      * Rigourous Test :-)
      */
-    public void testCreateAnswer()
+    public void testCreateInterviewEntry()
     {
         InterviewEntry interviewEntry = new InterviewEntry.InterviewEntryBuilder().with($ -> {
             $.questionID = "1";

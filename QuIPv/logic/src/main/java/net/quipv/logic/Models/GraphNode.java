@@ -44,6 +44,7 @@ public class GraphNode {
         }
         this.neighbours.add(neighbour);
     }
+
     public String getName() {
         return name;
     }
@@ -57,5 +58,27 @@ public class GraphNode {
     }
 
     public void setCount(int count) {this.count = count;}
+
+    @Override
+    public boolean equals(Object o){
+
+//        if(o == this){
+//            return true;
+//        }
+//
+//        if(!(o instanceof GraphNode)){
+//            return false;
+//        }
+//
+//        GraphNode node = (GraphNode) o;
+//
+//        return this.name == node.getName();
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
+    }
 
 }

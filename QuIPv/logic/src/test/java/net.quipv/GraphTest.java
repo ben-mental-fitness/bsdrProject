@@ -39,13 +39,20 @@ public class GraphTest
     public void testAddNode()
     {
         Graph graph = new Graph();
-        GraphNode node = new GraphNode.NodeBuilder().with($ -> {
+        GraphNode node1 = new GraphNode.NodeBuilder().with($ -> {
                         $.count = 1;
                         $.name = "Test node 1";
                 }).build();
 
-        graph.addNode(node);
+        graph.addNode(node1);
+        GraphNode node2 = new GraphNode.NodeBuilder().with($ -> {
+            $.count = 1;
+            $.name = "Test node 2";
+        }).build();
+
+        graph.addNode(node2);
 
         assertEquals( "Test node 1", graph.getVertices().get(0).getName());
+        assertEquals( 2, graph.getVerticesSet().size());
     }
 }

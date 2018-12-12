@@ -32,7 +32,7 @@ public class MainMenuController {
     public void newFileOpen(ActionEvent event) throws IOException {
         Scene mainScene;
         Stage primaryStage = (Stage) newFileButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("/views/MainScene.fxml"));
+        Parent newRoot = FXMLLoader.load(getClass().getResource("/Views/MainScene.fxml"));
         mainScene = new Scene(newRoot, 754, 573);
         primaryStage.setScene(mainScene);
     }

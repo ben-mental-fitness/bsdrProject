@@ -36,4 +36,5 @@ public class MainMenuController {
         mainScene = new Scene(newRoot, 754, 573);
         primaryStage.setScene(mainScene);
     }
+
 }

@@ -8,7 +8,7 @@ import net.quipv.logic.Models.Project;
 import java.util.List;
 
 public class GraphHelper {
-    public static List<GraphNode> constructGraph(Project project){
+    public static Graph constructGraph(Project project){
         Graph graph = new Graph();
         List<Answer> answers = project.getAnswers();
 

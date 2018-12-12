@@ -46,7 +46,7 @@ public class GraphTest
         graph.addNode(node2);
 
         assertEquals( "Test node 1", graph.getVertices().get(0).getName());
-        assertEquals( 2, graph.getVerticesSet().size());
+        assertEquals( 2, graph.getVertices().size());
     }
 
     public void testAddEdge(){

@@ -8,7 +8,6 @@ import net.quipv.logic.Models.Project;
 import net.quipv.logic.Models.Question;
 import net.quipv.logic.Models.Answer;
 import net.quipv.logic.Models.Respondent;
-import net.quipv.logic.Models.InterviewEntry;
 import java.util.ArrayList;
 
 /**

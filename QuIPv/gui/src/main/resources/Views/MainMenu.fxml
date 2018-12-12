@@ -11,44 +11,44 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="570.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainMenuController">
-   <children>
-      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
+    <children>
+        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.5868983957219251" layoutX="136.0" layoutY="151.0" prefHeight="570.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <ImageView fitHeight="540.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/logo.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="newFileButton" layoutX="78.0" layoutY="232.0" mnemonicParsing="false" onAction="#newFileOpen" prefWidth="150.0" text="New" />
+                        <Button fx:id="openFileButton" layoutX="78.0" layoutY="284.0" mnemonicParsing="false" onAction="#openFileError" prefWidth="150.0" text="Open" />
+                    </children>
+                </AnchorPane>
             </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <SplitPane dividerPositions="0.5868983957219251" layoutX="136.0" layoutY="151.0" prefHeight="570.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <ImageView fitHeight="540.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/logo.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Button fx:id="newFileButton" layoutX="78.0" layoutY="232.0" mnemonicParsing="false" onAction="#newFileOpen" prefWidth="150.0" text="New" />
-                  <Button fx:id="openFileButton" layoutX="78.0" layoutY="284.0" mnemonicParsing="false" onAction="#openFileError" prefWidth="150.0" text="Open" />
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+        </SplitPane>
+    </children>
 </AnchorPane>

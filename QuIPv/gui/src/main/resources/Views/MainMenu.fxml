@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.image.*?>
+
 <!--<?import java.lang.*?>-->
 <!--<?import java.util.*?>-->
 <!--<?import javafx.scene.*?>-->
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="570.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IntroSceneController">
+<AnchorPane prefHeight="570.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainMenuController">
    <children>
       <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -41,8 +44,8 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button layoutX="78.0" layoutY="232.0" mnemonicParsing="false" prefWidth="150.0" text="New" />
-                  <Button layoutX="78.0" layoutY="284.0" mnemonicParsing="false" prefWidth="150.0" text="Open" />
+                  <Button fx:id="newFileButton" layoutX="78.0" layoutY="232.0" mnemonicParsing="false" onAction="#newFileOpen" prefWidth="150.0" text="New" />
+                  <Button fx:id="openFileButton" layoutX="78.0" layoutY="284.0" mnemonicParsing="false" onAction="#openFileError" prefWidth="150.0" text="Open" />
                </children>
             </AnchorPane>
         </items>

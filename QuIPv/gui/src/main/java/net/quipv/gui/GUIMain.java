@@ -12,35 +12,27 @@ import net.quipv.logic.Models.*;
 public class GUIMain extends Application {
 
     Stage window;
-    Scene introScene, mainScene;
-
+    Scene menuScene, mainScene;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        //where window is the parent of every scene
-        //i.e. all scenes play on window
+
         window = primaryStage;
 
-        Parent root = FXMLLoader.load(getClass().getResource("/Views/introScene.fxml"));
-        Parent root2 = FXMLLoader.load(getClass().getResource("/Views/mainScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Views/MainMenu.fxml"));
+        Parent root2 = FXMLLoader.load(getClass().getResource("/Views/MainScene.fxml"));
 
-        introScene = new Scene(root, 754, 573);
-        mainScene = new Scene(root2, 754, 573);
+        menuScene = new Scene(root, 754, 573);
 
         primaryStage.setTitle("QuipV");
-        primaryStage.setScene(introScene);
+        primaryStage.setScene(menuScene);
         primaryStage.show();
-
-
 
         Project project = ProjectHelper.populate();
 
 
         System.out.println(project);
     }
-
-
-
 
     public static void main(String[] args) {
         launch(args);

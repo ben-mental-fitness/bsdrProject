@@ -44,6 +44,10 @@ public class GraphNode {
 
     public void setCount(int count) {this.count = count;}
 
+    public ArrayList<Neighbour> getNeighbours() {
+        return neighbours;
+    }
+
     @Override
     public boolean equals(Object o){
 

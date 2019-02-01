@@ -1,10 +1,10 @@
 # BSDR Project
 
->Software Product Engineering Project for creating qualitative causal chain data visualisations for Bath Social & Development Research Ltd
+>University of Bristol Software Product Engineering Project creating qualitative causal chain data visualisations for Bath Social & Development Research Ltd
 
 ### Overview
 
-This project aims to create a laptop application (Windows & iOS) which creates causal chain analysis diagrams for social impact assessment.
+This project aims to create a web application which creates causal chain analysis diagrams for social impact assessment.
  
  Below is an overview of the timeline for this project:
  
@@ -13,17 +13,7 @@ This project aims to create a laptop application (Windows & iOS) which creates c
  |Design Documents|16/11/2018|
  |Minimum Viable Product|12/12/2018|
  |Beta Release|13/02/2019|
- |Final Release & Portfolio Submission|17/04/2019|
- 
-### Structure & Languages
+ |Final Release & Portfolio Submission|17/04/2019| 
 
->UML Class Diagram (with language)
-
->UML Test Diagram (with language)
-
-### Example Run Through
-
->UML Flow Diagram
-
-UML FILES
+### UML FILES
 https://drive.google.com/drive/folders/1Vl9UOn3G2SBd21DzGxYa1skf6OQQavIb?usp=sharing

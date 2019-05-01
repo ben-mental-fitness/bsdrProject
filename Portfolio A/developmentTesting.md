@@ -18,14 +18,14 @@ Our client was also vital to the [Acceptance Testing](http://softwaretestingfund
 
 Below is an outline of testing for each module in the application back end:
 `JUnit`
-|Module | Test |
+| Module | Test |
 |:---:|:---:|
-|Config|Integration Testing using `JUnit` & `SpringBoot Tests` building on Models & Helpers Unit Testing [WBt]|
-|Controllers|System Testing uploading files with various flaws, looking for edges cases. Also using real world data from our clients [WBt, GBt, BBt]|
-|Helpers|Unit Testing using `JUnit` & `SpringBoot Tests`. We have 100% code coverage to ensure everything functions as intended [WBt]|
-|Models|Unit Testing using `JUnit` & `SpringBoot Tests`. We have 100% code coverage to ensure everything functions as intended [WBt]|
-|Service|System Testing creating new users & security with various flaws, looking for edges cases. Also using real world data from our clients [WBt, GBt, BBt]|
-|Validator|System Testing logging in with various flaws, looking for edges cases. Also using real world data from our clients [WBt, GBt, BBt]|
+| Config | Integration Testing using `JUnit` & `SpringBoot Tests` building on Models & Helpers Unit Testing (WBt) |
+| Controllers | System Testing uploading files with various flaws, looking for edges cases. Also using real world data from our clients (WBt, GBt, BBt) |
+| Helpers | Unit Testing using `JUnit` & `SpringBoot Tests`. We have 100% code coverage to ensure everything functions as intended (WBt) |
+| Models | Unit Testing using `JUnit` & `SpringBoot Tests`. We have 100% code coverage to ensure everything functions as intended (WBt) |
+| Service | System Testing creating new users & security with various flaws, looking for edges cases. Also using real world data from our clients (WBt, GBt, BBt) |
+| Validator | System Testing logging in with various flaws, looking for edges cases. Also using real world data from our clients (WBt, GBt, BBt) |
 
 ---
 

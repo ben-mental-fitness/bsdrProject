@@ -17,7 +17,7 @@ Our client was also vital to the [Acceptance Testing](http://softwaretestingfund
 ### Back End Testing
 
 Below is an outline of testing for each module in the application back end:
-`JUnit`
+
 | Module | Test |
 |:---:|:---:|
 | Config | Integration Testing using `JUnit` & `SpringBoot Tests` building on Models & Helpers Unit Testing (WBt) |

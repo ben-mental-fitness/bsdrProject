@@ -3,35 +3,29 @@ Development Testing
 
 ### Overview
 
-Our testing strategy is to use test driven development. We will begin by creating [Unit Tests](http://softwaretestingfundamentals.com/unit-testing/)
- for each module of our project. This will dictate the code written in each module, ensuring we have complete code coverage
- _i.e. code is only written to complete a test._ 
+We have used a multi level testing strategy for our fi nal product. Originally we planned to create [Unit Tests](http://softwaretestingfundamentals.com/unit-testing/)
+ for each module of our project  but decided that not all individual models needed testing or could be tested simply. We deemed it more valuable to test UI & some database controllers in a more real world approach by using the application ourselves. This allowed us to test a lot more inputs on the components without the overhead of setting up test data which would have been more time consuming.
  
-We will use bottom up [Integration Testing](http://softwaretestingfundamentals.com/integration-testing/) to test small
- groups of modules and functionality before building up to [Systems Testing](http://softwaretestingfundamentals.com/system-testing/).
- We will use Black Box Testing [_(BBt)_](http://softwaretestingfundamentals.com/black-box-testing/) for this, allowing us
- more accurately simulate real use of the entire system and to see how ouur program handles exceptional flow.
+For some modules that relied on others (e.g. Config relied on Models & Helpers) we used [Integration Testing](http://softwaretestingfundamentals.com/integration-testing/). This allowed us to build on our unit tests in order to validate the correct functioning of groups of modules.
+
+For the UI we decided that [Systems Testing](http://softwaretestingfundamentals.com/system-testing/) was the best option. We were able to utilise Black Box [_(BBt)_](http://softwaretestingfundamentals.com/black-box-testing/), White Box [_(WBt)_](http://softwaretestingfundamentals.com/white-box-testing/) and Gray Box [_(GBt)_](http://softwaretestingfundamentals.com/gray-box-testing/) testing in order to both assess real world usage of the application whilst digging deeper to investigate edge cases only known to the developers. This was accomplished using group members that created the UI (BBt), group members who didn't work on the UI but had knowledge of the system (GBt) and the client (WBt). Examples of this working well are example by on of our UI developers discovery that, due to a bug in the D3 library, if a node was placed on another then moved away a new edge would erroneously be created. Our client was also able to inform us that the file size restrictions used for the file upload were too restrictive as when they uploaded a different dataset (one we did not have access to) they recieved a Whitelabel error. We were then able to fix this bug quite quickly due to their feedback.
  
-[Acceptance Testing](http://softwaretestingfundamentals.com/acceptance-testing/) will be implemented through user testing.
- This will be either in-house _(we use the program and evaluate it against requirements ourselves)_, or through use by
- BSDR following each release in the development cycle. In-house testing is advantageous in allowing us to see what works
- and what doesn't using our knowledge of the system. BSDR testing gives us insight into how the application will be used in the
- real world, exposing bugs or flaws not apparent to our development team.
+Our client was also vital to the [Acceptance Testing](http://softwaretestingfundamentals.com/acceptance-testing/) of our application. Working with them we had created a set of functionality goals for the application which we worked towards and could measure to some extent for ourselves. This is how we initially tested our application before releasing it to the client. However, their feedback was more informative as to what they wanted as the expectations evolved throughout the project. Their continued feedback in the latter stages of the project was of great assistance to help guide our priorities when completing the application. BSDR testing gives us insight into how the application will be used in the real world, exposing bugs or flaws not apparent to our development team.
 
 ---
 
 ### Back End Testing
 
 Below is an outline of testing for each module in the application back end:
-
+`JUnit`
 |Module | Test |
 |:---:|:---:|
-|QuIPv|White Box Testing [_(WBt)_](http://softwaretestingfundamentals.com/white-box-testing/) using `JUnit`. Tests created beforehand to account for boundary & erroneous cases test driven development [_(tdd)_](http://agiledata.org/essays/tdd.html)|
-|DataNode|Simple `JUnit` module for testing getter & setter functionality|
-|SQLDataFetcher|Instead of testing SQL directly we will use the return values in java to test like QuIPv|
-|DynamicVisualiser|We will use `JUnit` to test the logic of the visualisations. On the UI side a `JFx Test Driver` will be used to look for erroneous inputs|
-|DynamicExporter|We will use the `JS Test Driver` in maven to test javascript exports in the visualisation|
-|StaticExporter|We will create a checksum using the image file which will return to `JUnit` tests. By using an online checksum calculator to create tests this process becomes a neat way to check files. This could easily be further developed to a Digital Signature for trusted file sharing|
+|Config|Integration Testing using `JUnit` & `SpringBoot Tests` building on Models & Helpers Unit Testing [WBt]|
+|Controllers|System Testing uploading files with various flaws, looking for edges cases. Also using real world data from our clients [WBt, GBt, BBt]|
+|Helpers|Unit Testing using `JUnit` & `SpringBoot Tests`. We have 100% code coverage to ensure everything functions as intended [WBt]|
+|Models|Unit Testing using `JUnit` & `SpringBoot Tests`. We have 100% code coverage to ensure everything functions as intended [WBt]|
+|Service|System Testing creating new users & security with various flaws, looking for edges cases. Also using real world data from our clients [WBt, GBt, BBt]|
+|Validator|System Testing logging in with various flaws, looking for edges cases. Also using real world data from our clients [WBt, GBt, BBt]|
 
 ---
 
@@ -46,13 +40,6 @@ Below is an outline of testing for each module in the application back end:
 |Test need to be up to date & inline with the clients needs|We will review & update tests after every sprint we complete. This includes reviewing our testing methodology, with the aim that this scrutiny will expose any problems with our methods before they grow further down the line of development.|
 
 ---
- 
-### Frameworks
-
--  Maven
-    - _JS Test Driver_
-    - _JUnit_
-    - _JFx Test Driver_
     
 #### References
 [Software Testing Fundamentals](http://softwaretestingfundamentals.com) 11/11/18

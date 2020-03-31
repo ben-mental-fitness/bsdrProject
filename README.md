@@ -1,5 +1,7 @@
 # BSDR Project
 
+> NOTE: This project has been archived
+
 >University of Bristol Software Product Engineering Project creating qualitative causal chain data visualisations for Bath Social & Development Research Ltd
 
 ### Overview
